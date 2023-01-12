@@ -28,20 +28,25 @@ export default {
   props: {
     num: Number
   },
-  created() {},
+  created() {
+    console.log('생성된 숫자' + this.num)
+  },
   methods: {
     getColor() {
       let color = 'black'
-      //   if (this.num > 0 && this.num <= 0) {
-      //     color = 'gold'
-      //   } else if (this.num > 10 && this.num <= 20) {
-      //     color = 'green'
-      //   } else if (this.num > 20 && this.num <= 30) {
-      //     color = 'gray'
-      //   } else if (this.num > 30 && this.num <= 40) {
-      //     color = 'black'
-      //   } else color = 'black'
-      //   console.log(color)
+      if (this.num > 0 && this.num <= 10) {
+        color = 'gold'
+      } else if (this.num > 10 && this.num <= 20) {
+        color = 'green'
+      } else if (this.num > 20 && this.num <= 30) {
+        color = 'gray'
+      } else if (this.num > 30 && this.num <= 40) {
+        color = 'blue'
+      } else {
+        color = 'black'
+      }
+
+      console.log(color)
       return color
     }
   }
